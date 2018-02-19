@@ -1,0 +1,45 @@
+body {
+  background: #c2c2c2;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-align: center;
+
+}
+.pixel {
+  display: inline-grid;
+  background-color: #ffffff;
+  height:  10px;
+  width: 10px;
+  border: 1px solid lightgrey;
+  float: left
+
+}
+.paintColor {
+  display: inline-grid;
+  background-color: #ffffff;
+  height:  50px;
+  width: 75px;
+  border: 1px solid black;
+}
+#container {
+  width: 800px;
+  padding: 10px;
+}
+#canvas {
+  padding: 10px;
+  height: 500px;
+  width: 750px;
+  border: 10px solid white;
+}
+#palette{
+  padding: 10px;
+  height: 50px;
+  width: 750px;
+  border: 10px solid #fff;
+  background-color: #fff
+}
+.blank { background-color: white }
+#red { background-color: red }
+#blue { background-color: blue }
+#green { background-color: green }
+#black { background-color: black }
