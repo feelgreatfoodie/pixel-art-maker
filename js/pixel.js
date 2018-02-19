@@ -10,10 +10,10 @@ function addPixels() {
     addPixels()
   }
 // create palette
-  let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white', 'black']
+  let colors = ['saddlebrown', 'darkred','red', 'orangered','orange', 'yellow', 'pink','bisque','khaki','darkkhaki','seagreen', 'green','cyan','skyblue','lightsteelblue','blue', 'darkblue', 'indigo', 'blueviolet', 'plum','black', 'grey','white']
   for (let j = 0; j < colors.length; j++) {
     let newColor = document.createElement('div')
-    newColor.setAttribute('class', 'paintColor')
+    newColor.setAttribute('class', 'paintColor round')
     newColor.style.backgroundColor = colors[j]
     let myPalette = document.getElementById('palette')
     myPalette.appendChild(newColor)
@@ -30,6 +30,8 @@ function addPixels() {
     event.target.style.backgroundColor = paintColor
   }
   canvas.addEventListener('click', changePixelColor)
+  canvas.addEventListener('click', changePixelColor)
+
   palette.addEventListener('click', changePaintColor)
 
 })

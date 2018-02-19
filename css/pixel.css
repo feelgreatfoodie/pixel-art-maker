@@ -14,13 +14,19 @@ body {
   float: left
 
 }
-.paintColor {
+.paintColor, input {
   display: inline-grid;
   background-color: #ffffff;
-  height:  50px;
-  width: 75px;
+  height: 30px;
+  width: 20px;
   border: 1px solid black;
+  margin: 2px;
 }
+.paintColor:hover {
+  position: relative;
+  top: -5px;
+}
+.round { border-radius: 10px }
 #container {
   width: 800px;
   padding: 10px;
