@@ -20,12 +20,13 @@ function addPixels() {
     newColor.style.backgroundColor = colors[j]
     myPalette.appendChild(newColor)
   }
-  // pick paint color
+  // pick paint color from provided palette
   let paintColor = 'black'
   function changePaintColor(event) {
     paintColor = event.target.style.backgroundColor
     myCanvas.style.backgroundColor = paintColor
   }
+  //pick paint with custom picker
   function changePaintColor2(event) {
     paintColor = colorWell.value
     console.log(paintColor)
@@ -35,13 +36,23 @@ function addPixels() {
   function changePixelColor(event) {
     event.target.style.backgroundColor = paintColor
   }
-  function changePixelColor2(event) {
-    event.target.style.backgroundColor = paintColor
-  }
-  canvas.addEventListener('mousedown', changePixelColor)
-  canvas.addEventListener('mousedown', changePixelColor2)
-  canvas.addEventListener('mouseup', changePixelColor)
+  // add event listeners to paint
+  canvas.addEventListener('mousedown', function (brush) {
+    paint = true
+    if (brush.target === false) {
+    }
+    else {changePixelColor}
+  })
+  canvas.addEventListener('mouseup', function (brush) {
+    paint = false
+  })
+  canvas.addEventListener('mouseover', function(brush) {
+     if (brush.target === this) {
+     } else if (paint === true) {
+         brush.target.style.backgroundColor = paintColor
+     } else {
+     }
+ })
   palette.addEventListener('click', changePaintColor)
   colorWell.addEventListener('change', changePaintColor2)
-
 })

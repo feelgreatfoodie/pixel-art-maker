@@ -1,11 +1,12 @@
 body {
   /* background: #c2c2c2; */
   background-image: url("../assets/bobRoss.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
   font-variant: small-caps;
   font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px #c2c2c2; 
+  text-shadow: 2px 2px #c2c2c2;
 
 }
 .pixel {
@@ -19,7 +20,7 @@ body {
 }
 .paintColor, input {
   display: inline-grid;
-  background-color: #ffffff;
+  background-color: #fff;
   height: 30px;
   width: 20px;
   border: 1px solid black;
@@ -28,8 +29,8 @@ body {
 .paintColor:hover {
   position: relative;
   top: -5px;
+  transition: 2s;
 }
-.round { border-radius: 10px }
 #container {
   width: 800px;
   padding: 10px;
@@ -38,18 +39,15 @@ body {
   padding: 10px;
   height: 500px;
   width: 750px;
-  border: 10px solid white;
+  border: 10px solid #fff;
 }
 #palette, #palette2{
   padding: 10px;
   height: 40px;
   width: 750px;
   border: 10px solid #fff;
-  background-color: #fff
+  background-color: lightblue;
+
 }
 input { float}
-.blank { background-color: white }
-#red { background-color: red }
-#blue { background-color: blue }
-#green { background-color: green }
-#black { background-color: black }
+.round { border-radius: 10px }
