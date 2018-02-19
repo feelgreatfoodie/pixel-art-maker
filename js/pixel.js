@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 //create canvas grid
+let myCanvas = document.getElementById('canvas')
+let myPalette = document.getElementById('palette')
+let colorWell = document.getElementById('colorWell')
+
 function addPixels() {
     let newPixel = document.createElement('div')
     newPixel.setAttribute('class', 'pixel')
-    let myCanvas = document.getElementById('canvas')
     myCanvas.appendChild(newPixel)
   }
   for (let i = 0; i < 2604; i++) {
@@ -15,23 +18,25 @@ function addPixels() {
     let newColor = document.createElement('div')
     newColor.setAttribute('class', 'paintColor round')
     newColor.style.backgroundColor = colors[j]
-    let myPalette = document.getElementById('palette')
     myPalette.appendChild(newColor)
   }
   // pick paint color
   let paintColor = 'black'
   function changePaintColor(event) {
     paintColor = event.target.style.backgroundColor
-    myBorder = document.getElementById('canvas')
-    myBorder.style.backgroundColor = paintColor
+    myCanvas.style.backgroundColor = paintColor
+  }
+  function changePaintColor2(event) {
+    paintColor = colorWell.value
+    console.log(paintColor)
+    myCanvas.style.backgroundColor = paintColor
   }
   //paint your picture
   function changePixelColor(event) {
     event.target.style.backgroundColor = paintColor
   }
   canvas.addEventListener('click', changePixelColor)
-  canvas.addEventListener('click', changePixelColor)
-
   palette.addEventListener('click', changePaintColor)
+  colorWell.addEventListener('change', changePaintColor2)
 
 })

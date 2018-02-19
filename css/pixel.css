@@ -37,13 +37,14 @@ body {
   width: 750px;
   border: 10px solid white;
 }
-#palette{
+#palette, #palette2{
   padding: 10px;
-  height: 50px;
+  height: 40px;
   width: 750px;
   border: 10px solid #fff;
   background-color: #fff
 }
+input { float}
 .blank { background-color: white }
 #red { background-color: red }
 #blue { background-color: blue }
