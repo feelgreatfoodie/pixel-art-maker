@@ -1,8 +1,11 @@
 body {
-  background: #c2c2c2;
+  /* background: #c2c2c2; */
+  background-image: url("../assets/bobRoss.jpg");
+  background-repeat: no-repeat;
   font-variant: small-caps;
   font-weight: bold;
   text-align: center;
+  text-shadow: 2px 2px #c2c2c2; 
 
 }
 .pixel {

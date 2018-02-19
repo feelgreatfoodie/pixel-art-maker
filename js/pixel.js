@@ -35,7 +35,12 @@ function addPixels() {
   function changePixelColor(event) {
     event.target.style.backgroundColor = paintColor
   }
-  canvas.addEventListener('click', changePixelColor)
+  function changePixelColor2(event) {
+    event.target.style.backgroundColor = paintColor
+  }
+  canvas.addEventListener('mousedown', changePixelColor)
+  canvas.addEventListener('mousedown', changePixelColor2)
+  canvas.addEventListener('mouseup', changePixelColor)
   palette.addEventListener('click', changePaintColor)
   colorWell.addEventListener('change', changePaintColor2)
 
