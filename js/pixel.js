@@ -13,7 +13,7 @@ function addPixels() {
     addPixels()
   }
 // create palette
-  let colors = ['saddlebrown', 'darkred','red', 'orangered','orange', 'yellow', 'pink','bisque','khaki','darkkhaki','seagreen', 'green','cyan','skyblue','lightsteelblue','blue', 'darkblue', 'indigo', 'blueviolet', 'plum','black', 'grey','white']
+  let colors = ['saddlebrown', 'darkred','red', 'orangered','orange', 'yellow', 'pink','bisque','khaki','darkkhaki','seagreen', 'green','cyan','skyblue','lightsteelblue','blue', 'darkblue', 'indigo', 'blueviolet','plum','black','grey','white']
   for (let j = 0; j < colors.length; j++) {
     let newColor = document.createElement('div')
     newColor.setAttribute('class', 'paintColor round')
@@ -53,6 +53,7 @@ function addPixels() {
      } else {
      }
  })
+  canvas.addEventListener('mousedown', changePixelColor)
   palette.addEventListener('click', changePaintColor)
   colorWell.addEventListener('change', changePaintColor2)
 })
